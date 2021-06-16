@@ -1,0 +1,812 @@
+
+access control
+访问控制	The selective restriction of access to a read a document or collection in Swarm
+在Swarm中对已一次读取文件或集合的访问进行选择性限制。
+
+access control trie
+访问控制查找树	A tree-like data structure containing access keys and other access information
+一种类似树的数据结构，包含访问密钥和其他访问信息。
+
+access key
+访问秘钥	Symmetric key used for encryption of reference to encrypted data
+用于加密“加密数据”引用的对称密钥。
+
+access key decryption key
+访问秘钥解密秘钥	The key the publisher grants to a party in a multi-party selective access scenario, used to decrypt the global access key
+发布者在多方选择性访问场景中授予一方的密钥，用于解密全局访问密钥。
+
+accessible chunk
+可访问块	A chunk is accessible if a message is routable between the requester and the node that is closest to the chunk
+如果消息在请求者和最接近块的节点之间可路由，则块是可访问的。
+
+address book 
+地址薄	Kademlia table of a peer’s known addresses
+节点的已知地址的 Kademlia 表。
+
+addressed envelope
+写上地址的信封	A construct where the address of the single owner chunk is created before the chunk content is associated with it.
+一种结构，在这个结构里，在块的内容与其关联之前，某单个所有者块的地址被创建。
+
+aligned incentives
+一致的激励	Rewarding / penalisation in such a way, that the actors are inclined towards the desired behavior.
+以这样的方式奖励/惩罚，使获得者倾向于期望的行为。
+
+anonymous retrieval
+匿名检索	Not disclosing the identity of the requestor node while retrieving a chunk.
+在检索块时不公开请求者节点的标识。
+
+anonymous uploads
+匿名上传	Uploading leveraging the forwarding Kademlia routing while keeping the identity of the uploader hidden.
+利用转发 Kademlia 路由上传，同时隐藏上传者的身份。
+
+area of responsibility
+责任范围	The area of the overlay address space in the node’s neighbourhood. A storer node is responsible for chunks belonging to this area.
+节点邻域中覆盖地址空间的区域。 一个存储节点负责属于这个区域的块。
+
+authoritative version history
+权威版本历史	A secure audit trail of the revisions of a mutable resource.
+可变资源修订的安全审计跟踪。
+
+Backwarding
+向后	A method of delivering a response to a forwarded request, where the response simply follows the request route back to the originator.
+一种向转发请求传递响应的方法，其中响应只是简单地沿着请求路由返回到发起方。
+
+balanced binary tree
+平衡二叉树	A binary tree in which subtrees of every node differ in height by at most 1.
+一种二叉树，其中每个结点的子树的高度最多相差1。
+
+batch
+批	A group of chunks referenced under an intermediate node.
+中间节点下引用的一组块。
+
+batch proof of custody
+保管的批证明	A canonically serialised ordered list of binary Merkle tree proofs
+二叉Merkle树证明的规范序列有序表
+
+bin ID
+bin ID	A sequential counter per PO bin acting as an index of the chunks stored locally on a node.
+每个 PO bin 的顺序计数器充当节点上本地存储的块的索引。
+
+binary Merkle tree
+二叉Merkle树	A binary tree in which every leaf node is labelled with the cryptographic hash of a data block, and every non-leaf node is labelled with hash of the labels of its child nodes.
+一个二叉树，其中每个叶节点都用数据块的加密哈希标记，每个非叶节点都用其子节点的标签哈希标记。
+
+binary Merkle tree chunk
+二叉Merkle树块	The canonical content addressed chunk in Swarm.
+Swarm中的规范内容寻址块。
+
+binary Merkle tree hash
+二叉Merkle树哈希	The method used for calculating the address of the binary Merkle tree chunks.
+计算二叉Merkle树块地址的方法。
+
+BitTorrent
+比特精灵	A communication protocol for peer-to-peer file sharing used to distribute data and electronic files over the Internet.
+一种用于点对点文件共享的通信协议，用于在因特网上分发数据和电子文件。
+
+blockchain 
+区块链	An immutable list of blocks, where each next block contains a cryptographic hash of the previous block.
+一种不可变的块列表，其中每个下一个块都包含上一个块的加密哈希。
+
+Blockhash
+区块哈希	The hash of a block which itself forms part of a blockchain.
+本身构成区块链一部分的区块哈希。
+
+bzz account
+bzz账户	An account in Swarm, also see Swarm base account.
+Swarm中的帐户，也可参见Swarm基本帐户。
+
+bzz network ID
+bzz网络ID	The ID of the Swarm network.
+Swarm网络的ID。
+
+Cauchy-Reed-Solomon erasure code
+柯西-里德-所罗门纠删码	A systemic erasure code which when applied to data consisting of n chunks produces k extra ’parity’ chunks in such a way that any n chunks out of the total n + k are enough to reconstruct the original blob.
+一种系统纠删码，当应用于由n个块组成的数据时，它产生k个额外的奇偶校验块，使得n+k个块中的任何n个块都足以重建原始块。
+
+challenge
+质询	User can submit a challenge when they attempt to retrieve insured content and fail to find a chunk.
+当用户尝试检索受保内容但找不到区块时，可以提交质询。
+
+cheque
+支票	An off-chain method of payment where issuer signs a cheque specifying a beneficiary, a date and an amount, gives it to the recipient as a token of promise to pay at a later date.
+一种链下支付方式，发行人在支票上签字，注明受益人、日期和金额，作为承诺在以后付款的信物交给收款人。
+
+chequebook contract
+支票薄合约	Smart contract that allows the beneficiary to choose when payments are to be processed.
+允许受益人选择何时处理付款的智能合约。
+
+chunk
+块	A chunk is fixed sized data blob, the basic unit of storage in Swarm’s DISC keyed by its address. There are both content addressed chunks and single owner chunks.
+块是固定大小的数据 blob，是 Swarm 的 DISC 中的基本存储单元，由其地址键控，有内容寻址块和单一所有者块。
+
+chunk span
+块跨度	The length of data subsumed under an intermediate chunk.
+包含在中间块下的数据长度。
+
+chunk synchronization
+块同步	The process in which a peer stores locally the chunks from an upstream peer.
+节点在本地存储来自上游节点的块的过程。
+
+chunk value
+块值	The chunk value is determined by the price of the postage batch it is stamped with. It serves to determine the order of chunks when a node prioritises for garbage collection.
+块值是由它所加盖的邮费批的价格决定的。它用于确定节点为垃圾收集设置优先级时块的顺序。
+
+chunking
+分块	Splitting of data into chunks, to be stored in Swarm.
+将数据分成块，存储在Swarm中。
+
+collect-and-run attack
+搜集-运行攻击	Situation where a party would collect the funds for some promised work, but not actually do the work.
+某组织会为某些承诺的工作筹集资金，但实际上却不做这项工作的情况。
+
+collective information
+集体信息	Data produced by collective effort, such as data on public forums, reviews, votes, polls, wikis.
+集体努力产生的数据，例如公共论坛、评论、投票、民意调查、维基上的数据。
+
+collision slot
+膨胀槽	The collection of maximum length prefixes that any two chunks stamped with a postage batch are allowed to share. A stamped chunk occupies a collision slot.
+允许任何两个带有邮费批标记的块共享的最大长度前缀的集合。一个盖邮戳的块占据一个碰撞槽。
+
+content addressed chunk
+内容寻址块	A chunk is content addressed if the chunk content determines the chunk address. The address usually represents a fingerprint or digest of the data using some hash function. The default content addressed chunk in Swarm uses the Binary Merkle Tree hash algorithm with Keccak256 base hash to determine its address.
+如果块内容确定块地址，则块是内容寻址的。 地址通常使用一些散列函数表示数据的指纹或摘要。 Swarm 中默认的内容寻址块使用二进制默克尔树哈希算法和 Keccak256 基本哈希来确定其地址。
+
+data silo
+数据孤岛	A collection of information in an organization that is isolated from and not accessible by other parts of the organization. In more general terms, the large datasets organisations often keep to themselves.
+一个组织中的信息集合，它与组织的其他部分隔离并且不可被组织的其他部分访问。更笼统地说，大型数据集组织往往为自己托管。
+
+data slavery
+数据奴役	A situation where an individual is trapped in a situation where they do not control or receive sufficient remuneration for their personal data which is used for commercial purposes by companies.
+个人陷入无法控制公司用于商业目的的个人数据或无法获得足够报酬的情况。
+
+decentralised network
+去中心化网络	A network designed with no central nodes upon which the other nodes would need to depend on.
+一种其他节点无需依赖中央节点的网络。
+
+deep bin
+深度bin
+	A bin that is relatively close to a particular node and hence contains a smaller part of the address space.
+一种相对靠近某一特定节点的bin，因此包含地址空间的一小部分。
+
+denial of service (DoS)
+拒绝服务攻击	Denying of access to services by flooding those services with illegitimate requests.
+以非法请求充斥这些服务，从而拒绝获得这些服务。
+
+destination target
+目的地目标	A bit sequence that represents a neighbourhood in the address space. In the context of chunk mining, it refers to the prefix that the mined address should match.
+表示地址空间中邻域的一种位序列。在块挖掘的上下文中，它指的是挖掘出的地址应该匹配的前缀。
+
+devp2p	A set of network protocols which form the Ethereum peer-to-peer network. Implemented as a set of programming libraries with the same name.
+形成以太坊点对点网络的一组网络协议。 实现为一组同名的编程库。
+
+direct delivery
+直接传递	Chunk delivery happens in one step via some lower level network protocol.
+块传送通过一些较低级别的网络协议一步完成。
+
+direct notification from publisher
+来自发布者的直接通知	The process where a recipient is notified of a feed update by the publisher or other parties known to have it.
+这样一个过程：接受者被通知（发布者或已知拥有它的其他组派驱动的）提要更新。
+
+disconnect threshold
+断开阈值	The threshold for debt between peers that determines the value of the debt at which a peer in debt will be disconnected.
+节点之间的债务阈值，该阈值决定了负有债务的节点将被断开连接的债务价值。
+
+distributed hash table
+分布式哈希表	A distributed system that provides a lookup service with which any participating node can efficiently retrieve the value associated with a given key.
+一种提供查找服务的分布式系统，任何参与节点都可以通过该服务高效地检索与给定键关联的值。
+
+distributed immutable store for chunks
+用于块的分布式不可变存储	Swarm’s version of a distributed hash table for storing files. Swarm does not keep a list of where files are to be found, instead it actually stores pieces of the file directly on the node.
+Swarm版本的用于存储文件的分布式哈希表。Swarm不保留能够查找到文件的列表，而是直接将文件片段存储在节点上。
+
+distributed storage
+分布式存储	A network of storage where information is stored on more than one node, possibly in replicated fashion.
+一种存储网络，其中信息可能以复制的方式存储在多个节点上。
+
+distributed web application
+分布式web应用程序	A client side web application that leverages the Web 3.0 technologies (e.g. Ethereum network) and does not rely on any central server.
+客户端web应用程序，利用web 3.0技术（例如以太坊网络），不依赖任何中央服务器。
+
+double ratchet
+双棘轮	An industry standard key management solution providing forward secrecy, backward secrecy, immediate decryption and message loss resilience.
+业界标准的密钥管理解决方案，提供前向保密、后向保密、即时解密和消息丢失恢复能力。
+
+duplicate chunk
+重复块	We define a chunk as a duplicate (or seen) if and only if it is already found in the local store.
+当且仅当块已在本地存储中被找到时，我们将该块定义为重复（或可见）。
+
+elliptic curve Diffie-Hellman
+椭圆曲线 Diffie-Hellman	A key agreement protocol that allows two parties, each in possession of an elliptic-curve public–private key pair, to establish a shared secret over an insecure channel.
+一种密钥协商协议，允许双方各自拥有一个椭圆曲线公私密钥对，通过不安全的通道建立共享秘密。
+
+encrypted reference
+加密参考	Symmetric encryption of a swarm reference to access controlled content.
+对访问受控内容的swarm引用进行对称加密。
+
+enode URL scheme
+节点 URL 方案	A URL scheme under which an Ethereum node can be described.
+可以描述以太坊节点的 URL 方案。
+
+entanglement code
+纠错码	An error correction code optimized for bandwidth of repair.
+用于优化带宽修复的纠错码。
+
+epoch
+纪元	A concrete time period starting at a specific point in time with specific length.
+从特定时间点开始的具体时间段，具有特定的长度。
+
+epoch base time
+纪元基准时间	The specific point in time when an epoch starts.
+一个纪元开始的特定时间点。
+
+epoch grid
+纪元网格	The arrangement of epochs where rows (referred to as levels) represent alternative partitioning of time into various disjoint epochs with the same length.
+一种历元的排列方式，其中行（称为层）代表时间的交替划分，划分为不同的不相交的具有相同长度的历元。
+
+epoch reference
+纪元参考	A pair of epoch base time and level that identify a specific epoch.
+一对以纪元为基准的时间和等级，用来标识一个特定的纪元。
+
+epoch-based feeds
+基于纪元的订阅源	Special kind of feeds which provide feeds with sporadic updates a way to be searched.
+一种特殊的提要，它为不定期更新的提要提供了一种搜索方式。
+
+epoch-based indexing
+基于纪元的索引	Indexing based on the epoch in which an action took place.
+基于（行动发生的纪元的）索引。
+
+erasure code
+纠删码	An error correction coding scheme which optimally inflates data of n chunks with k parities to allow any n out of the n + k chunks to recover the original data.
+一种纠错编码方案，它以 k 个奇偶校验最佳地膨胀 n 个块的数据，以允许 n + k 个块中的任何 n 块恢复原始数据。
+
+Ethereum Name Service
+以太坊域名服务	The system that, analogously to the DNS of the old web, translates human-readable names into system-specific identifiers, i.e. a reference in the case of Swarm.
+该系统类似于旧网络的 DNS，将人类可读的名称转换为系统特定的标识符，即 Swarm 中的引用。
+
+Ethereum Virtual Machine (EVM)
+以太坊虚拟机	A Turing complete byte code interpreter that is responsible to calculate state changes by executing the instructions of smart contracts.
+一个图灵完备的字节码解释器，负责通过执行智能合约的指令来计算状态变化。
+
+eventual consistency
+最终一致性	The guarantee that all chunks are redundantly retrievable after allowing time for the neighbourhood peers to sync their content.
+在允许邻居节点同步其内容之后，保证所有块都是可冗余检索的。
+
+extended triple Diffie–Hellmann key exchange
+可扩展三重Diffie-Hellmann密钥交换	The customary method of establishing the initial parameters of a double ratchet key-chain.
+确定双棘轮钥匙链初始参数的常用方法。
+
+fair data economy
+公平数据经济 	Economy of processing data characterised by fair compensation of all parties involved in its creation or enrichment.
+处理数据的经济，其特点是公平补偿参与其创建或丰富的所有各方。
+
+feed aggregation
+feed聚合	The process of combining a set of sporadic feeds into a periodic one.
+把一组零散的信息组合成一个周期性信息的过程。
+
+feed index
+feed索引	Part of the identifier of the feed chunk.
+feed块标识符的一部分。
+
+feed topic
+feed主题	Part of the identifier of the feed chunk.
+feed块标识符的一部分。
+feeds	A data structure based on single owner chunks, suitable for representing a variety of sequential data, such as versioning updates of a mutable resource or indexing messages for real-time data exchange offering a system of persisted pull messaging.
+基于单个所有者块的数据结构，适用于表示各种顺序数据，例如可变资源的版本更新或用于实时数据交换的索引消息（提供持久的拉取消息系统）。
+
+fingerpointing
+指点	Litigation scheme allowing upstream peers to shift blame to a downstream peer in the case of deferred responsibility.
+允许上游节点在延迟责任的情况下将责任推给下游节点的诉讼方案。
+
+forwarding Kademlia
+转发 Kademlia	Recursive flavour of Kademlia routing involving message relay.
+包含消息中继的Kademlia路由的递归风格。
+
+forwarding lag
+转发延迟	The time in which healthy nodes could forward messages.
+健康节点可以转发消息的时间。
+
+Freeriding
+自由骑行	The uncompensated depletion of limited resources.
+有限资源的无补偿损耗。
+
+future secrecy
+未来的秘密	A feature of specific key agreement protocols that gives assurances that all other session keys will not be compromised even one or more session keys is obtained by an attacker.
+特定密钥协商协议的一种特性，它能保证即使攻击者获得一个或多个会话密钥，所有其他会话密钥也不会受到攻击。
+
+garbage collection
+垃圾回收	The process that selectively purges chunks from a node’s local storage.
+有选择地从节点的本地存储中清除块的过程。
+
+garbage collection strategy
+垃圾回收策略	The process that dictates which chunks are chosen for garbage collection.
+指示选择哪些块进行垃圾回收的过程。
+
+global balance
+全域平衡	The amount deposited in the chequebook to serve as collateral for the cheques.
+存入支票簿作为支票抵押品的金额。
+
+granted access
+授权访问	A type of selective access to encrypted content requiring root access as well as access credentials comprising either an authorized private key or passphrase.
+对加密内容的一种选择性访问，需要根访问权限以及包含授权私钥或密码短语的访问凭证。
+
+guaranteed delivery
+保证交付	Guaranteed in the sense that delivery failures due to network problems result in direct error response.
+保证由于网络问题导致的传递失败会导致直接的错误响应。
+
+head start
+头起步	A configurable time interval that defines the waiting time before an exploration of an area for updates of epoch-based feeds.
+一个可配置的时间间隔，即定义区域（该区域用于基于epoch的feeds更新）探索之前的等待时间。
+
+hive protocol
+蜂巢协议	The protocol nodes joining the network use to discover their peers.
+加入网络的协议节点用来发现它们的对等节点。
+
+immutable chunk store
+不可变块存储	No replace/update operation is available on chunks.
+块上没有可用的替换/更新操作。
+
+incentive strategy
+激励策略	A strategy of rewarding and penalising behavior to encourage desired behaviour.
+奖励和惩罚行为以鼓励期望行为的策略。
+
+inclusion proofs
+包含证明	A proof that a string is a substring of another string, for instance that a string is included in a chunk.
+一个字符串是另一个字符串的子字符串的证明，例如一个字符串包含在一个块中。
+
+indexing scheme
+索引方案	Defines the way the addresses of subsequent updates of a feed are calculated. The choice of indexing scheme depends on the type and usage characteristics (update frequency) of the feed.
+定义被计算的feed的后续更新地址的方式。索引方案的选择取决于feed的类型和使用特性（更新频率）。
+
+Insider
+内部者	A peer inside the Swarm that already has some funds
+Swarm 内部已经有一些资金的同行。
+
+InterPlanetary File System
+星际文件系统	A protocol and peer-to-peer network for storing and sharing data in a distributed file system.
+一种用于在分布式文件系统中存储和共享数据的协议和对等网络。
+
+Kademlia	A network connectivity or routing scheme based on bit prefix length used in distributed hash tables.
+一种基于bit前缀长度的网络连接或路由方案，用于分布式哈希表中。
+
+light node
+轻节点	Concept of light node refer to a special mode of operation necessitated by poor bandwidth environments, e.g., mobile devices on low throughput networks or devices allowing only transient or low-volume storage. Such nodes do not accept incoming connections.
+轻节点的概念是指带宽环境较差所需的特殊操作模式，例如低吞吐量网络上的移动设备或仅允许临时或低容量存储的设备。 此类节点不接受传入连接。
+
+litigation
+诉讼	An on-chain process where nodes violating the rules of Swarm stand to lose their deposit.
+违反 Swarm 规则的节点将失去存款的链上过程。
+
+load balancing
+负载均衡	The process of distributing a set of tasks over a set of nodes to make the process more efficient.
+将一组任务分配到一组节点上以提高处理效率的过程。
+
+lookahead area
+展望区域	An area that can be part of search of the algorithm that finds the latest update of a epoch-based feed.
+可以作为算法搜索的一部分的区域，该算法查找基于 epoch 的feed的最新更新。
+
+lookback area
+回顾区域	An area that can be part of search of the algorithm that finds the latest update of a epoch-based feed.
+可以作为算法搜索的一部分的区域，该算法查找基于 epoch 的feed的最新更新。
+
+lookup key
+查找key	One of the keys involved in the process of allowing selective access to content to multiple parties.
+允许多组群有选择地访问内容的过程中涉及的key之一。
+
+lookup strategy
+查找策略	A strategy used for following updates to feeds.
+用于跟踪feed更新的策略。
+
+manifest entry
+清单条目	Contains a reference to the Swarm root chunk of the representation of a file and also specifies the media mime type of file.
+包含对文件表示形式的Swarm根块的引用，并指定文件的媒体mime类型。
+
+mining chunks
+挖掘块	An example of chunk mining is to generate an encrypted variant of chunk content so that the resulting chunk address satisfies certain constraints, e.g. is closer to or farther away from a particular address.
+块挖掘的一个例子是生成块内容的加密变体，以便得到的块地址满足某些约束，例如 离特定地址更近或更远。
+
+missing chunk notification protocol
+丢失块通知协议	A protocol upon which downloader not finding a chunk, can fall back to a recovery process and request the chunk from a pinner of that chunk.
+一种协议，下载者在该协议上找不到块，可以退回到恢复过程并从该块的 pinner 请求该块。
+
+mutable resource updates
+可变资源更新	Feeds that represent revisions of the same semantic entity.
+表示同一语义实体的修订的feeds。
+
+nearest neighbours
+最近的邻居	Generally, peers that are closest to the node. In particular, those residing within the neighbourhood depth of each other.
+通常，最接近节点的peer点，尤其是那些居住在邻里之间的peer点。
+
+Neighbourhood
+邻域	An area of a certain distance around an address.
+地址周围一定距离的区域。
+
+neighbourhood depth
+邻域深度	Distance from the node within which its peers are considered to be nearest neighbours.
+与节点之间的距离，在该距离内，其peer节点被认为是最近的邻居。
+
+neighbourhood notification
+邻域通知	Notification of a feed update which works without the issuer of the notification needing to know the identity of prospective posters.
+feed更新的通知，该通知的发布人无需知道潜在posters的身份即可。
+
+neighbourhood size
+邻域大小	The number of nearest neighbours of a node.
+节点最近的邻居数。
+
+net provider
+净提供者	A node that is providing more resources to the Swarm network than it is using.
+一种向Swarm网络提供比它使用的资源更多的节点。
+
+net user
+净使用者	A node that is using more resources of the Swarm network than it is providing.
+一种使用Swarm网络中比它提供的资源更多的节点。
+
+network churn
+网络流失	The cycle of accumulation and attrition of nodes by a network.
+网络中节点的积累和消耗循环。
+
+newcomer
+新加入方	A party entering the Swarm system with zero liquid funds.
+以零流动资金进入 Swarm 系统的一方。
+
+（forwarding）node
+转发节点	Nodes that engage in forwarding messages.
+参与转发消息的节点。
+
+（stable）node
+稳定节点	Node that is stably online.
+稳定在线的节点。
+
+（storer）node
+存储节点	A node storing the requested chunk
+存储被请求块的节点。
+
+on-chain payment
+链上支付	Payment via a blockchain network.
+通过区块链网络支付。
+
+opportunistic caching
+机会性缓存	When a forwarding node receives a chunk, then the chunk is saved in case it will be requested again.
+当转发节点接收到一个块时，会保存该块以备再次请求时使用。
+
+outbox feed
+发件箱feed	A feed representing the outgoing messages of a persona.
+一个代表个人传出消息的feed.
+
+outbox index key chains
+发件箱索引键链	Additional key chains added to the double-ratchet key management (beside the ones for encryption) that make the feed update locations resilient to compromise.
+添加到双棘轮密钥管理中的额外密钥链（除了用于加密的密钥链之外），使feed更新位置具有抵御危害的能力。
+
+overlay address
+覆盖地址	The address with which each node running Swarm is identified. It is the basis for communication in the sense that it remains stable across sessions even if underlay address changes.
+运行Swarm的每个节点的标识地址。它是通信的基础，因为即使底层地址发生变化，它也能在会话间保持稳定。
+
+overlay address space
+覆盖地址空间	Address space of the overlay Swarm network consisting of 256-bit integers.
+由256位整数组成的覆盖Swarm网络的地址空间。
+
+overlay network
+覆盖网络	Connectivity pattern of Swarm secondary conceptual network, a second network scheme overlayed over the base underlay network.
+Swarm 二级概念网络的连接模式，覆盖在基础底层网络上的第二种网络方案。
+
+overlay topology
+覆盖拓扑	The connectivity graph realising a particular topology over the underlay network.
+在底层网络上实现特定拓扑的连接图。
+
+payment threshold
+支付阈值	The value of debt at which a cheque is issued.
+签发支票时的债务值。
+
+peer
+对等节点	Nodes that are in relation to a particular node x are called peers of x.
+与特定节点 x 相关的节点称为 x 的对等节点。
+
+（downstream）peer
+下游对等点	A peer that succeeds some other peer in the chain of forwarding.
+在转发链中接替某个其他对等点的对等点。
+
+peer-to-peer
+点对点	A network where tasks or workloads are partitioned between peers who are all equally privileged participants.
+一个网络，其中任务或工作负载在所有具有同等特权的peer之间分配。
+
+pinner
+钉子	A node keeping a persistent copy of a chunk.
+一个保留块的持久副本的节点。
+
+pinning
+固定	The mechanism that makes content sticky and prevents it from being garbage collected.
+使内容具有粘性并防止其被垃圾收集的机制。
+
+plausible deniability
+合理的否认	The ability to deny knowledge of any damnable actions committed by others.
+否认他人犯下任何该死的行为的能力。
+
+postage batch
+邮费批	A postage batch is an id associated with a verifiable payment on chain which can be attached to one or more chunks as a postage stamp.
+一个邮费批是与链上可验证付款相关联的 ID，它可以作为邮票附加到一个或多个块上。
+
+postage lottery
+邮费彩票	A scheme to provide compensation to storing nodes through redistribution of the revenue resulting from postage stamps among the registered storers in a fair way.
+一种通过以公平方式在注册存储者之间重新分配邮票产生的收入来为存储节点提供补偿的方案。
+
+postage stamp
+邮票	Proof of payment for pre-paid delivery and storage.
+预付运费和存储费的付款证明。
+
+pre-key bundle
+预密钥包	Consists of all information the initiator needs to know about the responder to initiate a cryptographic handshake.
+由发起方需要知道的关于响应方的所有信息组成，以发起加密握手。
+
+prefix collision
+前缀冲突	In the context of postage stamps, when the owner of a batch attaches a stamp to two chunks with a shared prefix longer than the depth of the batch.
+在邮票的上下文中，当一个批的所有者使用一个比该批深度长的共享前缀把一个戳附加到两个块时。
+
+prompt recovery of data
+迅速恢复数据	The protocol of the missing chunk notification and recovery.
+丢失块通知和恢复的协议。
+
+proximity order
+邻近顺序	A measure of relatedness of two addresses on a discrete scale.
+在离散尺度上衡量两个地址的相关性的一种方法。
+proximity order bin	An equivalence class of peers in regard to their proximity order.
+一个peers的等价类，关于他们的邻近顺序.
+
+pub/sub systems
+发布/订阅系统	A publish/subscribe system is a form of asynchronous communication where any message published is immediately received by subscribers.
+发布/订阅系统是一种异步通信形式，其中发布的任何消息都会立即被订阅者接收。
+
+pull syncing
+拉同步	Network protocol responsible for eventual consistency and maximum resource utilisation by pulling chunks by a certain node.
+网络协议通过一个特定的节点拉取块，来负责最终的一致性和最大化的资源利用率。
+
+push syncing
+推同步	Network protocol responsible for delivering a chunk to its proper storer after it is uploaded to an arbitrary node.
+一种网络协议，负责在将数据块上传到任意节点后，将数据块传送到相应的存储点。
+
+radius of responsibility
+责任范围	The proximity order designating the area of responsibility.
+指定责任区域的邻近指令。
+
+raffle draw
+抽奖	Instance of the postage lottery draw repeated every N blocks conducted by the postage lottery contract on the blockchain.
+区块链上邮费彩票合约每N个区块重复一次邮费彩票抽奖实例。
+
+raffle–apply–claim–earn (race)
+抽奖-申请-申领-赢取（比赛）	The postage lottery protocol for incentivising nonpromissory storage by redistributing postage stamp revenue to simple nonstaked storers applying with proof of custody.
+通过将邮票收入重新分配给（凭保管证明申请的）简单非抵押存储者来激励非承诺存储的邮费彩票协议。
+
+range queries
+范围查询	Range queries will trigger the retrieval of all but only those chunks of the file that cover the desired range.
+范围查询将触发检索所有包含所需范围的文件块，但仅限于这些块。
+
+real-time integrity check
+实时完整性检查	For any deterministically indexed feed. Integrity translates to a non-forking or unique chain commitment.
+对于任何确定性索引的feed。 完整性转化为非分叉或独特的链承诺。
+
+recover security
+恢复安全	A property that ensures that once an adversary manages to forge a message from A to B, then no future message from A to B will be accepted by B.
+一种属性，可确保一旦对手设法伪造从 A 到 B 的消息，B 将不再接受从 A 到 B 的未来消息。
+
+recovery
+恢复	A process of requesting a missing chunk from specific recovery hosts.
+从特定恢复主机请求丢失块的过程。
+
+recovery feed
+恢复feed	A publisher’s feed advertising recovery targets to their consumers.
+一个发布者feed面向他们的消费者公布恢复对象。
+
+recovery host
+恢复host	Pinning nodes that are willing to provide their pinned chunks in the context of recovery.
+愿意在恢复上下文中提供其所复制的块的固定节点。
+
+recovery request
+恢复请求	A request to a recovery host to initiate the reupload of a missing chunk we know it has pinned in its local store.
+向恢复主机发出的请求，请求重新加载丢失的块（我们知道它已固定在其本地存储中）。
+
+recovery response envelope
+恢复影响信封	An addressed envelope which provides a way for recovery hosts to respond directly to the originator of the recovery request promptly and without cost or computational burden.
+一种寻址信封，它为恢复主机提供了一种方式，可以迅速直接响应恢复请求的发起者，而无需任何成本或计算负担。
+
+recovery targets
+恢复对象	Volunteering nodes that are advertised by the publisher as keeping pinned its globally pinned publication.
+由发布服务器播发为保持锁定其全局已发布内容的自愿性节点。
+
+Redundancy
+冗余	In the context of the distributed chunk store, redundancy is provided by surplus replicas or so called parities that contribute to resilience of chunk storage in the face of churn and garbage collection.
+在分布式块存储的上下文中，冗余由多余的副本或所谓的奇偶校验提供，这些副本有助于块存储在面临流失和垃圾收集时的弹性。
+
+redundant Kademlia connectivity
+冗余 Kademlia 连接	A Kademlia connectivity where some peers might churn, yet Kademlia connectivity would still exist.
+一个Kademlia连接性，其中一些对等点可能会搅动，但是Kademlia连接性仍然存在。
+
+redundant retrievability
+冗余可检索性	A chunk is said to be redundantly retrievable with degree r if it is retrievable and would remain so after any r nodes responsible for it leave the network.
+如果一个块是可检索的，则称其为r级冗余可检索，并且在负责该块的r节点离开网络后，该块将保持r级冗余可检索。
+
+reference count
+引用计数	A property of a chunk used to prevent it from being garbage collected. It is increased and decreased when the chunk is pinned and unpinned, respectively.
+块的一种属性，用来防止它被垃圾收集。分别在固定和取消固定块时增加和减少。
+
+relaying node
+中继节点	A node relaying messages in the context of forwarding Kademlia.
+在转发Kademlia的上下文中中继消息的节点。
+
+requestor node
+请求者节点	A node requesting some information from the network.
+网络请求某些信息的节点。  
+
+retrieve request
+检索请求	Peer-to-peer protocol message asking for the delivery of a chunk based on the chunk address.
+点对点协议消息要求基于块地址传递块。
+
+root access
+根访问	Non-privileged access to encrypted content based on meta-information encoded in the root manifest entry for a document.
+对加密内容的非特权访问，基于文档根清单条目中编码的元信息。
+
+root access manifest
+根访问清单	A special unencrypted manifest used as an entry point for access control.
+一种特殊的未加密清单，用作访问控制的入口点。
+
+routability
+可路由性	The ability for a chunk to be routed to a destination.
+将块路由到目的地的能力。
+
+routed delivery
+路由传送	Hypothetical way of implementing chunk delivery using Kademlia routing independently of the initial request.
+使用独立于初始请求的 Kademlia 路由实现块交付的假设方法。
+
+routing
+路由	Relaying messages via a chain of peers ever closer to the destination.
+通过越来越接近目的地的对等点链传递消息。
+
+saturated Kademlia table
+饱和 Kademlia 表	Nodes with a saturated Kademlia table realise Kademlia connectivity.
+具有饱和 Kademlia 表的节点实现 Kademlia 连接。
+
+saturation depth
+饱和深度	The neighbourhood depth in the context of saturation (minimum cardinality) constraints on proximity bins outside the nearest neighbourhood.
+在最近邻域之外的接近bin上的饱和（最小基数）约束的情况下，邻域的深度。
+
+second-layer payment
+第二层支付	Payments processed by an additional system superimposed on a blockchain network.
+由叠加在区块链网络上的附加系统处理的支付。
+
+security deposit
+保证金	The stake a node must put up when registering to be able to sell promissory storage receipts.
+节点在注册出售本票存储收据时必须投入的股份。
+
+seeder
+播种者	User hosting the content in the BitTorrent peer-to-peer file exchange protocol.
+在BitTorrent对等文件交换协议中托管内容的用户。
+
+sender anonymity
+发件人匿名	As requests are relayed from peer-to-peer, those further down on the request cascade can never know who the originator of the request is.
+由于请求是从点对点中继的，因此请求级联下游的那些人永远无法知道请求的发起者是谁。
+
+session key
+会话密钥	One of the keys involved in the process of allowing selective access to content to multiple parties.
+允许多组群有选择地访问内容的过程中涉及的key之一。
+
+shallow bin
+浅bin	A bin that is relatively far away from a particular node and hence contains a larger part of the address space.
+距离特定节点相对较远的 bin，因此包含较大部分的地址空间。
+
+single owner chunk
+单一所有者区块	A special type of chunk in Swarm, the integrity of which is given by the association of its payload to an identifier attested by the signature of its owner. The identifier and the owner’s account determines the chunk address.
+Swarm 中的一种特殊类型的块，其完整性由有效载荷与所有者签名证明的标识符之间的关联提供。标识符和所有者的帐户决定了该块地址。
+
+singleton manifest
+单例清单	A manifest that contains a single entry to a file.
+包含单个文件条目的清单。
+
+span value
+跨度值	An 8 byte encoding of the length of the data span subsumed under an intermediate chunk.
+一个包含在中间块下的数据跨度长度的8字节编码。
+
+spurious hop
+假跳	Relaying traffic to a node without increasing proximity to the target address.
+在不增加与目标地址的接近度的情况下将流量中继到节点。
+
+stamped addressed envelope
+贴邮票的有地址的信封	Addressed envelope with an attached stamp.
+附有邮票的写好地址的信封。
+
+statement of custody receipt
+保管收据声明	A receipt from the storer node to the uploader after successful push syncing of a chunk.
+成功推送同步块后，从存储节点到上传节点的回执。
+
+stream provider
+流提供者	To provide of a stream of chunks to another node on request.
+根据请求向另一个节点提供块流。
+
+swap
+交换	swap is a Swarm accounting protocol with a tit-for-tat accounting scheme that scales microtransactions. Includes a network protocol also called Swap.
+swap 是一种 Swarm 记账协议，采用针锋相对的记账方案，可扩展微交易。 包括也称为Swap的网络协议。
+
+Swarm base account
+Swarm 基础账户	The Ethereum account the Swarm node is associated with. See also bzz account.
+Swarm 节点关联的以太坊账户。 另请参阅 bzz 帐户。
+
+Swarm manifest
+Swarm清单	A structure that defines a mapping between arbitrary paths and files to handle collections.
+定义任意路径和文件之间的映射以处理集合的结构。
+
+swear
+发誓	Incentive scheme where nodes registered on the Swarm network are accountable and stand to lose their deposit if they are found to violate the rules of the Swarm in an on-chain litigation process.
+一种激励方案，如果在链上诉讼过程中发现节点违反 Swarm 规则，则在 Swarm 网络上注册的节点将承担责任并失去存款。
+
+swindle
+骗取	Incentive scheme where nodes monitor other nodes to check if they comply with their promise by submitting challenges according to a process of litigation.
+一种激励方案，其中节点根据诉讼程序提出的质疑来监视其他节点，以检查它们是否遵守其承诺。
+
+tar stream
+tar流	In computing, tar is a computer software utility for collecting many files into one archive file, often referred to as a tarball.
+在计算中，tar是一种计算机软件实用程序，用于将多个文件收集到一个归档文件中，通常称为tarball。
+
+targeted chunk delivery
+目标区块交付	Mechanism to request a chunk from an arbitrary neighbourhood where it is known to be stored to an arbitrary neighbourhood where it is known to be needed.
+从已知存储块的任意邻域请求块到已知需要块的任意邻域的机制。
+
+time to live
+生命周期	The lifespan or lifetime of a request or other message in a computer or network.
+计算机或网络中请求或其他消息的生命周期。
+
+tragedy of commons
+公共的悲剧	A situation where, in a shared-resource system, individual users act in their own interest contrary to common good and deplete or spoil the shared resource through collective action.
+在共享资源系统中，个别用户为了自己的利益而违背公共利益，通过集体行动耗尽或破坏共享资源的一种情况。
+
+tragedy of the commons
+该公共的悲剧	Disappearing content will have no negative consequence to any one storer node if no negative incentives are used.
+如果没有使用负面激励措施，内容的消失不会对任何一个存储节点产生负面影响。
+
+Trojan chunk
+特洛伊块	A chunk containing a disguised message while appearing no different to other chunks.
+一个包含伪装信息的块，但看起来与其他块没有区别。
+
+trustless
+不可信任的	property of a system of economic interaction where service provision is either realtime verifiable and/or providers are accountable, reward and penalties are automatically enforced, and where – as a result – transaction security is no longer contingent upon reputation or trust and is therefore scalable.
+经济互动系统的属性，其中服务提供可实时验证和/或提供者负责，奖励和惩罚自动执行，交易安全不再取决于声誉或信任，因此可扩展。
+
+underlay address
+底层地址	The address of a Swarm node on the underlay network. It might not remain stable between sessions.
+底层网络上 Swarm 节点的地址。 它可能不会在会话之间保持稳定。
+
+underlay network
+底层网络	The lowest level base network by which nodes connect using a peer-to-peer network protocol as their transport layer.
+节点使用点对点网络协议作为其传输层进行连接的最低级别基础网络。
+
+uniformity requirement
+均匀性要求	A constraint on postage batches that chunks signed with same batch identifier must not have a common prefix longer than the depth.
+对使用相同 batch 标识符签名的块的邮费 batches 的约束不得具有长于该深度的公共前缀。
+
+upload and disappear
+上传和消失	A way to deploy your interactive dynamic content to be stored in the cloud so it may be retrieved even if the uploader goes offline.
+一种部署交互式动态内容以存储在云中的方法，这样即使上传者离线也可以检索到它。
+
+upload tag
+上传标签	An object representing an upload and tracking the progress by counting how many chunks reached a particular state.
+表示上传和通过计算达到特定状态的块的数量来跟踪过程的对象。
+
+uploader
+上传者	An entity uploading content to the Swarm network.
+将内容上传到 Swarm 网络的实体。
+
+upstream peer
+上游peer	The peer preceding some other peer in the chain of forwarding.
+转发链中某个其他peer之前的peer。
+
+value-consistent garbage collection strategy
+值一致的垃圾回收策略	Strategy of garbage collection where a minimum postage stamp value accepted on a chunk coincides with the garbage collection cutoff value.
+垃圾收集策略，其中块上接受的最小邮票值与垃圾收集截止值一致。
+
+witness
+见证	Digital signature issued by the entity that the payer of a postage stamp designates.
+由邮票付款人指定的实体签发的数字签名。
+
+witness batch
+见证batch	Serves as a spot check for the applicant’s claim that they store all chunks they are responsible for. The witness batch is random choice of the valid postage batches; the applicant must have actually stored all chunks in their neighbourhood.
+作为对申请人声称他们存储他们负责的所有块的声明的抽查。见证batch是随机选择有效邮费batch； 申请人必须实际存储了他们附近的所有块。
+
+ZeroNet
+零网	Decentralized web platform using Bitcoin cryptography and BitTorrent network.
+使用比特币加密和 BitTorrent 网络的去中心化网络平台。
+
