@@ -265,7 +265,7 @@ Ethereum Name Service
 
 Ethereum Virtual Machine (EVM)
 以太坊虚拟机	A Turing complete byte code interpreter that is responsible to calculate state changes by executing the instructions of smart contracts.
-一个图灵完备的字节码解释器，负责通过执行智能合约的指令来计算状态变化。
+一个图灵完备的字节码解释器，负责通过执行智能合约的指令来计算状态的变化。
 
 eventual consistency
 最终一致性	The guarantee that all chunks are redundantly retrievable after allowing time for the neighbourhood peers to sync their content.
